@@ -1,20 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/login/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/128/2900/2900122.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/login/index.css" />
     <title>Cursos | Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="container">
-        <section class="form_container">
-            <header><img src="./assets/images/OIP.webp" alt="logotipo"></header>
-        </section>
-        <section class="image_container"></section>
+      <section class="form_container">
+        <header>
+          <img
+            class="logotipo"
+            src="https://cdn-icons-png.flaticon.com/128/6956/6956773.png"
+            alt="logotipo"
+          />
+        </header>
+        <div class="form_content">
+          <div class="form_top">
+            <h1>Bem-vindo</h1>
+            <p>Faça login para continuar</p>
+          </div>
+          <div class="form_goal">
+            <button id="signup-btn">Sign Up</button>
+            <button id="signin-btn">Sign In</button>
+          </div>
+          <form class="form" id="login-form">
+            <div class="input_group">
+              <label for="email"><i class="fas fa-envelope"></i></label>
+              <div class="input_field">
+                <label for="email">Seu email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="input_group">
+              <label for="password"><i class="fas fa-lock"></i></label>
+              <div class="input_field">
+                <label for="password">Sua senha</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <i class="fas fa-check"></i>
+            </div>
+            <button type="submit" class="submit_btn">Entrar</button>
+          </form>
+          <div class="form_line">logar com</div>
+          <div class="form_bottom form_options">
+            <button class="option" id="facebook-btn">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                alt="facebook"
+              />
+            </button>
+            <button class="option" id="github-btn">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/733/733609.png"
+                alt="github"
+              />
+            </button>
+            <button class="option" id="google-btn">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/281/281764.png"
+                alt="google"
+              />
+            </button>
+          </div>
+        </div>
+        <footer>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            consequatur omnis a beatae modi quibusdam, nemo culpa placeat facere
+            accusamus unde totam?
+          </p>
+        </footer>
+      </section>
+      <section class="image_container"></section>
     </main>
 
-     <script type="module" src="scripts/index.js"></script>
-</body>
+    <script type="module" src="scripts/index.js"></script>
+  </body>
 </html>
