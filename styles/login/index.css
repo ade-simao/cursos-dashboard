@@ -1,38 +1,206 @@
 .logotipo {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
 
 .container > * {
-    flex: 1;
+  flex: 1;
 }
 
+/* --------------- Estilos do formulário de login ------------------- */
 .form_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0.4rem;
+}
+
+.form_header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  height: 1.6rem;
+  color: var(--secondary-color);
+}
+
+.form_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  width: 320px;
+}
+
+.form_content .form_top {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.form_content .form_goal {
+  background: var(--secondary-color);
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+
+  button {
+    padding: 0.4rem 2rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .active {
+    background-color: white;
+  }
+}
+
+.form_content .form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  .input_group {
+    /* background: #e0a9a9; */
+    box-sizing: content-box;
+    border: .2rem solid var(--secondary-color);
+    height: 2.8rem;
+    position: relative;
+    width: 320px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    border-radius: 0.6rem;
+
+    .input_icon {
+      padding: 1rem;
+      position: relative;
+    }
+
+    .line {
+      width: 1.5px;
+      height: 40%;
+      background: var(--secondary-color);
+      margin-right: 7px;
+      transform: translateX(-3px);
+    }
+
+    .input_field {
+      width: 72%;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 0.6rem;
+        color: #666;
+      }
+
+      input {
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+      }
+    }
+    .inpt_check {
+      position: absolute;
+      right: 0.6rem;
+      padding: 0.2rem;
+      background: green;
+      font-size: .6rem;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .submit_btn {
+    background: var(--primary-color);
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+}
+
+.form_content .form_line {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  font-size: 0.8rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -70%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -70%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+}
+
+.form_content .form_bottom {
+  display: flex;
+  gap: 1.2rem;
+
+  .option {
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex: 0 0 2.8rem;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  #google-btn {
+    border: 1px solid #666;
+
+    img {
+        width: 60%;
+    }
+  }
 }
+
+.form_footer {
+  font-size: 0.8rem;
+  text-align: center;
+  max-width: 425px;
+}
+/* --------------- Estilos do formulário de login ------------------- */
 
 .image_container {
-    display: none;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/40/5e/e3/405ee3ea9c4ae01e201e414d4b75188c.jpg') center center no-repeat fixed;
-    background-size: cover;
+  display: none;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.pinimg.com/736x/40/5e/e3/405ee3ea9c4ae01e201e414d4b75188c.jpg")
+      center center no-repeat fixed;
+  background-size: cover;
 }
 
+/* -------------------- Media Queries -------------------- */
 @media (min-width: 768px) {
-    .image_container {
-        display: block;
-    }
+  .image_container {
+    display: block;
+  }
 }
 
 @media (min-width: 1024px) {
-    .form_container {
-        flex: 0.5;
-    }
+  .form_container {
+    flex: 0.5;
+  }
 }
