@@ -23,53 +23,60 @@
   <body>
     <main class="container">
       <section class="form_container">
-        <header>
+        <header class="form_header">
           <img
             class="logotipo"
             src="https://cdn-icons-png.flaticon.com/128/6956/6956773.png"
             alt="logotipo"
           />
+          <h1>Dev</h1>
         </header>
-        <div class="form_content">
+        <main class="form_content">
           <div class="form_top">
-            <h1>Bem-vindo</h1>
+            <h1>Bem vindo</h1>
             <p>Faça login para continuar</p>
           </div>
           <div class="form_goal">
-            <button id="signup-btn">Sign Up</button>
+            <button class="active" id="signup-btn">Sign Up</button>
             <button id="signin-btn">Sign In</button>
           </div>
           <form class="form" id="login-form">
-            <div class="input_group">
-              <label for="email"><i class="fas fa-envelope"></i></label>
+            <label class="input_group">
+              <span class="input_icon" for="email"
+                ><i class="fas fa-envelope"></i
+              ></span>
+              <span class="line"></span>
               <div class="input_field">
                 <label for="email">Seu email</label>
-                <input type="email" id="email" name="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
               </div>
-              <i class="fas fa-check"></i>
-            </div>
-            <div class="input_group">
-              <label for="password"><i class="fas fa-lock"></i></label>
+              <i class="fas fa-check inpt_check"></i>
+            </label>
+            <label class="input_group">
+              <span class="input_icon" for="password"
+                ><i class="fas fa-lock"></i
+              ></span>
+              <div class="line"></div>
               <div class="input_field">
                 <label for="password">Sua senha</label>
                 <input type="password" id="password" name="password" required />
               </div>
-              <i class="fas fa-check"></i>
-            </div>
+              <i class="fas fa-check inpt_check"></i>
+            </label>
             <button type="submit" class="submit_btn">Entrar</button>
           </form>
-          <div class="form_line">logar com</div>
+          <div class="form_line">continuar com</div>
           <div class="form_bottom form_options">
             <button class="option" id="facebook-btn">
               <img
                 src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
                 alt="facebook"
-              />
-            </button>
-            <button class="option" id="github-btn">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/733/733609.png"
-                alt="github"
               />
             </button>
             <button class="option" id="google-btn">
@@ -78,9 +85,15 @@
                 alt="google"
               />
             </button>
+            <button class="option" id="github-btn">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/733/733609.png"
+                alt="github"
+              />
+            </button>
           </div>
-        </div>
-        <footer>
+        </main>
+        <footer class="form_footer">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
             consequatur omnis a beatae modi quibusdam, nemo culpa placeat facere
