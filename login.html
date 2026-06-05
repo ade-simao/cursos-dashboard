@@ -8,6 +8,7 @@
       href="https://cdn-icons-png.flaticon.com/128/2900/2900122.png"
       type="image/x-icon"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -37,8 +38,8 @@
             <p>Faça login para continuar</p>
           </div>
           <div class="form_goal">
-            <button class="active" id="signup-btn">Sign Up</button>
-            <button id="signin-btn">Sign In</button>
+            <button class="goal" id="signup-btn">Sign Up</button>
+            <button class="goal active" id="signin-btn">Sign In</button>
           </div>
           <form class="form" id="login-form">
             <label class="input_group">
@@ -65,7 +66,7 @@
               <div class="line"></div>
               <div class="input_field">
                 <label for="password">Sua senha</label>
-                <input type="password" id="password" name="password" required />
+                <input type="password" id="password" name="password" minlength="6" required />
               </div>
               <i class="fas fa-check inpt_check"></i>
             </label>
@@ -105,5 +106,6 @@
     </main>
 
     <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="scripts/login/index.js"></script>
   </body>
 </html>
