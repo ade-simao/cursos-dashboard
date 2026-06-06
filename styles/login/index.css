@@ -1,206 +1,186 @@
-.logotipo {
-  max-width: 150px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, #0d6efd 0%, transparent 30%),
+    radial-gradient(circle at bottom left, #ffd70022 0%, transparent 25%),
+    #050b1f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Estrelas */
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.2;
 }
 
 .container {
+  width: 90%;
+  max-width: 1200px;
+
   display: flex;
-  flex-direction: row;
-  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+
+  position: relative;
+  z-index: 10;
 }
 
-.container > * {
+.brand {
   flex: 1;
 }
 
-/* --------------- Estilos do formulário de login ------------------- */
-.form_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem 0.4rem;
+.brand h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
-.form_header {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.8rem;
-  height: 1.6rem;
-  color: var(--secondary-color);
+.brand h2 {
+  color: #ffd700;
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: 8px;
+
+  text-shadow:
+    0 0 15px #ffd700,
+    0 0 30px #ffd700;
 }
 
-.form_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
-  width: 320px;
+.brand p {
+  color: #d6d6d6;
+  margin-top: 15px;
+  font-size: 1.1rem;
 }
 
-.form_content .form_top {
+.login-card {
+  width: 420px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 0 40px rgba(13, 110, 253, 0.3);
+}
+
+.login-card h3 {
+  color: white;
   text-align: center;
-  font-size: 0.8rem;
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
-.form_content .form_goal {
-  background: var(--secondary-color);
-  padding: 0.2rem;
-  border-radius: 0.4rem;
-
-  button {
-    padding: 0.4rem 2rem;
-    border-radius: 0.4rem;
-    font-size: 0.9rem;
-  }
-
-  .active {
-    background-color: white;
-  }
-}
-
-.form_content .form {
+.login-card form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-
-  .input_group {
-    /* background: #e0a9a9; */
-    box-sizing: content-box;
-    border: .2rem solid var(--secondary-color);
-    height: 2.8rem;
-    position: relative;
-    width: 320px;
-    display: flex;
-    align-items: center;
-    border-radius: 0.6rem;
-
-    .input_icon {
-      padding: 1rem;
-      position: relative;
-    }
-
-    .line {
-      width: 1.5px;
-      height: 40%;
-      background: var(--secondary-color);
-      margin-right: 7px;
-      transform: translateX(-3px);
-    }
-
-    .input_field {
-      width: 72%;
-      display: flex;
-      flex-direction: column;
-
-      label {
-        font-size: 0.6rem;
-        color: #666;
-      }
-
-      input {
-        width: 100%;
-        border: none;
-        background: none;
-        outline: none;
-      }
-    }
-    .inpt_check {
-      position: absolute;
-      right: 0.6rem;
-      padding: 0.2rem;
-      background: green;
-      font-size: .6rem;
-      color: #fff;
-      border-radius: 50%;
-    }
-  }
-
-  .submit_btn {
-    background: var(--primary-color);
-    padding: 0.6rem;
-    border-radius: 0.6rem;
-    font-size: 1.1rem;
-    color: #fff;
-  }
+  gap: 20px;
 }
 
-.form_content .form_line {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  overflow-x: hidden;
-  font-size: 0.8rem;
+.login-card input {
+  padding: 16px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -70%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  outline: none;
+}
+
+.login-card input::placeholder {
+  color: #cfcfcf;
+}
+
+.login-card button {
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  background: #ffd700;
+
+  color: #050b1f;
+
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 0 25px #ffd700;
+}
+
+.register {
+  margin-top: 20px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.register a {
+  color: #1e90ff;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.register a:hover {
+  color: #ffd700;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .brand h1 {
+    font-size: 2.8rem;
+  }
+
+  .brand h2 {
+    font-size: 4rem;
+  }
+
+  .login-card {
     width: 100%;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -70%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-  }
-}
-
-.form_content .form_bottom {
-  display: flex;
-  gap: 1.2rem;
-
-  .option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 2.8rem;
-    background-color: #fff;
-    border-radius: 50%;
-  }
-
-  #google-btn {
-    border: 1px solid #666;
-
-    img {
-        width: 60%;
-    }
-  }
-}
-
-.form_footer {
-  font-size: 0.8rem;
-  text-align: center;
-  max-width: 425px;
-}
-/* --------------- Estilos do formulário de login ------------------- */
-
-.image_container {
-  display: none;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://i.pinimg.com/736x/40/5e/e3/405ee3ea9c4ae01e201e414d4b75188c.jpg")
-      center center no-repeat fixed;
-  background-size: cover;
-}
-
-/* -------------------- Media Queries -------------------- */
-@media (min-width: 768px) {
-  .image_container {
-    display: block;
-  }
-}
-
-@media (min-width: 1024px) {
-  .form_container {
-    flex: 0.5;
+    max-width: 420px;
   }
 }
