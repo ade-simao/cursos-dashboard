@@ -3,6 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script type="module" src="scripts/helpers/hasProfile.js"></script>
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="styles/admin/index.css" />
+  </head>
+
+  <body hidden>
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2>Admin</h2>
+
+        <nav>
+          <button data-section="dashboard">Dashboard</button>
+          <button data-section="students">Alunos</button>
+          <button data-section="modules">Módulos</button>
+          <button data-section="lessons">Aulas</button>
+          <button data-section="exercises">Exercícios</button>
+          <button data-section="challenges">Desafios</button>
+          <button data-section="submissions">Submissões</button>
+        </nav>
+
+        <button id="logout" class="logout">Logout</button>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content">
+        <section id="dashboard" class="section active">
+          <h1>Dashboard</h1>
+          <p>Visão geral do sistema</p>
+        </section>
+
+        <section id="students" class="section">
+          <h1>Alunos</h1>
+        </section>
+
+        <section id="modules" class="section">
+          <h1>Módulos</h1>
+        </section>
+
+        <section id="lessons" class="section">
+          <h1>Aulas</h1>
+        </section>
+
+        <section id="exercises" class="section">
+          <h1>Exercícios</h1>
+        </section>
+
+        <section id="challenges" class="section">
+          <h1>Desafios</h1>
+        </section>
+
+        <section id="submissions" class="section">
+          <h1>Submissões</h1>
+        </section>
+      </main>
+    </div>
+
+    <script src="scripts/admin/index.js"></script>
+  </body>
+</html>
+
+<!-- <!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script type="module" src="scripts/helpers/hasProfile.js"></script>
@@ -21,4 +93,4 @@
 
     <script type="module" src="scripts/index.js"></script>
   </body>
-</html>
+</html> -->
