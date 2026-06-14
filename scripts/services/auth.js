@@ -1,6 +1,4 @@
-const supabase_url = "https://uczyzxljqufhfveatpqt.supabase.co";
-const supabase_key = "sb_publishable_AyVULKC9lACjsKMYm1Karg_82It_wU1";
-const supabase = window.supabase.createClient(supabase_url, supabase_key);
+import { supabase } from "./supabase.js";
 
 export const register = async (email, password) => {
   const { data, error } = await supabase.auth.signUp({
