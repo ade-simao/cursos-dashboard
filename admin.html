@@ -11,7 +11,7 @@
 
     <title>Admin Panel</title>
 
-    <link rel="stylesheet" href="styles/admin/index.css" />
+    <link rel="stylesheet" href="styles/admin/admin.css" />
   </head>
 
   <body hidden>
@@ -30,7 +30,7 @@
           <button data-section="submissions">Submissões</button>
         </nav>
 
-        <button id="logout" class="logout">Logout</button>
+        <button id="logoutBtn" class="logout">Logout</button>
       </aside>
 
       <!-- CONTENT -->
@@ -42,6 +42,8 @@
 
         <section id="students" class="section">
           <h1>Alunos</h1>
+
+          <div id="studentsContainer">Carregando...</div>
         </section>
 
         <section id="modules" class="section">
@@ -66,7 +68,7 @@
       </main>
     </div>
 
-    <script src="scripts/admin/index.js"></script>
+    <script type="module" src="scripts/admin/admin.js"></script>
   </body>
 </html>
 
